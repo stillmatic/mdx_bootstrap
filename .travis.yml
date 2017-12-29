@@ -1,0 +1,22 @@
+# After changing this file, check it on:
+#   http://lint.travis-ci.org/
+language: python
+sudo: false
+
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "pypy3"
+
+install:
+  - pip install -e .
+  - pip install codecov
+
+script:
+  - coverage run setup.py test
+  - coverage report -m
+
+after_script:
+  codecov
