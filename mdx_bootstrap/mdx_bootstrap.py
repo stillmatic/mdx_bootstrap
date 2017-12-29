@@ -3,20 +3,6 @@ from markdown.treeprocessors import Treeprocessor
 
 
 class BootstrapExtension(Extension):
-    def __init__(self, *args, **kwargs):
-        """Merge user and default configuration."""
-        # Default settings.
-        self.config = {
-            'metadata': [
-                ['title'],
-                'List of metadata keys to which apply Bootstrap classes.'],
-        }
-
-        # Override defaults with user settings.
-        for key, value in kwargs.items():
-            self.setConfig(key, str(value))
-
-        super(BootstrapExtension, self).__init__(*args, **kwargs)
 
     def extendMarkdown(self, md, md_globals):
         md.registerExtension(self)
