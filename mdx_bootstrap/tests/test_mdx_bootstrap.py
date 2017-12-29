@@ -6,6 +6,7 @@ import textwrap
 from mdx_bootstrap import BootstrapExtension
 from mdx_gfm import GithubFlavoredMarkdownExtension
 
+
 class MDXBootstrap(unittest.TestCase):
 
     def test_load_extension_as_string(self):

@@ -11,8 +11,9 @@ python:
   - "pypy3"
 
 install:
-  - pip install -e .
-  - pip install codecov
+  - pip install pipenv
+  - pipenv install -d --system
+  - pipenv install codecov
 
 script:
   - coverage run setup.py test

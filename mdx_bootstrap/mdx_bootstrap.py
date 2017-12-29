@@ -1,6 +1,5 @@
 from markdown import Extension
 from markdown.treeprocessors import Treeprocessor
-from markdown.util import etree
 
 
 class BootstrapExtension(Extension):

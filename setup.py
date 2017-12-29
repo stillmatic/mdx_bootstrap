@@ -29,6 +29,7 @@ setup(name='MDX Bootstrap',
       license='MIT',
       install_requires=[
             'markdown',
+            'py-gfm'
       ],
       tests_require=[],
       test_suite=MODULE_NAME + '.tests',
